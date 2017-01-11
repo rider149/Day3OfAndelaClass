@@ -24,13 +24,15 @@ var result = [];
 }  
 
 Array.prototype.search= function(number){ 
-var result = {};
-var count=0;
-var min = 0;
+    var result = {};
+    var count=0;
+    var min = 0;
     var max = this.length - 1;
     var mid;
-
     while(min <= max) {
+        if (this[this.length-1]){
+            count=0;
+        }
         mid = Math.floor((max + min) / 2);
 
         if (this[mid] === number) {

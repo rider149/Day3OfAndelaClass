@@ -64,7 +64,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
     });
     it('should return {count: 0, index: 19} for 40', function() {
       var search  = twoToForty.search(40);
-      expect(search.count).toBe(4);
+      expect(search.count).toBe(0);
       expect(search.index).toBe(19);
     });
     it('should return {count: < /* array length */, index: -1} for 33 ', function () {
@@ -76,7 +76,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
   describe('Get the index of the item with an expected number of loops in array [10, 20 . . . 1000]', function() {
     it('should return {count: /* <= 3 */, index: 3} for 40', function() {
       var search  = tenToOneThousand.search(40);
-      expect(search.count).toBeLessThan(6);
+      expect(search.count).toBeLessThan(4);
       expect(search.index).toBe(3);
     });
     it('should return {count: /* <= 5*/, index: 87} for 800', function() {
